@@ -1,0 +1,21 @@
+<% provide(:title,"Edit user") %>
+
+<h1>Update your profile</h1>
+
+<div class="form">
+  <%= form_for(@user) do |f| %>
+    <%= render 'fields',f: f %>
+
+    <%= label_tag :test_frequency,"Tests every " %>
+    <%= f.select(:test_frequency,1..7) %> days <br /><br />
+
+    <%= label_tag :old_password,"Old Password (required to make changes)" %>
+    <%= password_field_tag :old_password %>
+
+    <%= f.submit "Save changes",class: "button" %>
+  <% end %>
+
+  <% if !@user.confirmed? %>
+    <p><%= link_to "Resend activation?",new_email_confirmation_path,class: "button" %></p>
+  <% end %>
+</div>

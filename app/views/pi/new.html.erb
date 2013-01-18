@@ -1,0 +1,10 @@
+<% provide :title,'Pi' %>
+<h2>Initial Test</h2>
+<p>Please enter as many digits of pi as you know (starting with 3.14).</p>
+<div class="form">
+  <%= form_tag pi_index_path do %>
+    <%= text_area_tag :pi,params[:pi] %>
+
+    <%= submit_tag "Submit",class: "button" %>
+  <% end %>
+</div>

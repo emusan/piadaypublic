@@ -1,0 +1,10 @@
+<% provide :title,'Re-send email confirmation' %>
+<h1>Resend email Confirmation</h1>
+
+<%= form_tag email_confirmations_path,method: :post do %>
+  <div class="form">
+    <%= label_tag :email %>
+    <%= text_field_tag :email,params[:email] %>
+  </div>
+  <div class="actions"><%= submit_tag "Resend Confirmation",class: "button" %></div>
+<% end %>

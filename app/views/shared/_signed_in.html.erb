@@ -1,0 +1,23 @@
+<% if current_user.pi %>
+  <%= link_to image_tag("pi-link.png",alt: "Pi"),edit_pi_path(current_user.pi),class: "pibutton" %><br />
+<% else %>
+  <%= link_to image_tag("pi-link.png",alt:"Pi"),new_pi_path,class: "pibutton" %><br />
+<% end %>
+<% if current_user.e %>
+  <%= link_to image_tag("e-link.png",alt: "e"),edit_e_path(current_user.e),class: "pibutton" %><br />
+<% else %>
+  <%= link_to image_tag("e-link.png",alt: "e"),new_e_path,class: "pibutton" %><br />
+<% end %>
+<% if current_user.use_tau %>
+  <% if current_user.phi %>
+    <%= link_to image_tag("tau-link.png",alt: "Tau"),edit_phi_path(current_user.phi),class: "pibutton" %>
+  <% else %>
+    <%= link_to image_tag("tau-link.png",alt: "Tau"),new_phi_path,class: "pibutton" %>
+  <% end %>
+<% else %>
+  <% if current_user.phi %>
+    <%= link_to image_tag("phi-link.png",alt: "Phi"),edit_phi_path(current_user.phi),class: "pibutton" %>
+  <% else %>
+    <%= link_to image_tag("phi-link.png",alt: "Phi"),new_phi_path,class: "pibutton" %>
+  <% end %>
+<% end %>

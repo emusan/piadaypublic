@@ -1,0 +1,10 @@
+<% provide :title,'e' %>
+<h2>Initial Test</h2>
+<p>Please enter as many digits of e as you know (starting with 2.71).</p>
+<div class="form">
+  <%= form_tag e_index_path do %>
+    <%= text_area_tag :e,params[:e] %>
+
+    <%= submit_tag "Submit",class: "button" %>
+  <% end %>
+</div>

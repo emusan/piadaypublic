@@ -1,0 +1,181 @@
+/* General */
+
+/* 
+  You'll notice that I didn't really organize this into the different 
+  files provided, if you think that I'm "wrong" for not doing so by 
+  all means "fix" it and send a pull request and I'll happily 
+  implement your code, on the other hand, this is only 181 lines in 
+  total right now, and there is *some* organization, so it shouldn't 
+  be too bad as it is.
+*/
+
+body {
+  text-align: center;
+}
+
+#ads {                  // should ads be included in the layout >.>
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 25px;
+  padding-bottom: 0;
+}
+
+.container {
+  margin-top: 60px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 600px;
+}
+
+h1 {
+  font-size: 2.5em;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  line-height: 1;
+  font-weight: bold;
+}
+
+.pibutton {
+  border: none;
+  margin-right: auto;
+  margin-left: auto;
+  width: 200px;
+  padding-right: auto;
+  padding-left: auto;
+  padding-top: 20px;
+  display: inline-block;
+}
+
+.button {
+  border-radius: 3px 3px 3px 3px;
+  border: 1px solid #BBBBBB;
+  font-size: 16px;
+  line-height: normal;
+  padding: 4px 10px;
+  display: inline-block;
+  box-shadow: 0 1px 1px rgba(0,0,0,.75) inset;
+  background-color: silver;
+  font-weight: none;
+  &:hover {
+    color: black;
+  }
+}
+
+a {
+  border: none;
+  color: black;
+  &:hover {
+    color: silver;
+  }
+  &:visited {
+    color: black;
+  }
+  &.button {
+    text-decoration: none;
+    color: #555555;
+  }
+}
+
+.digits {
+  padding: 2px;
+  border: 1px solid silver;
+  line-height: 1.7;
+}
+
+.nextnum {
+  padding-left: 2px;
+  padding-right: 2px;
+  border: 1px solid silver;
+  width: auto;
+}
+
+/* Header */
+
+/* Footer */
+
+footer {
+  margin-top: 15px;
+  padding-top: 5px;
+  border-top: 1px solid gray;
+  color: gray;
+  a {
+    color: black;
+    &:hover {
+      color: silver;
+    }
+  }
+  small {
+    float: left;
+    font-size: small;
+    z-index: -1;
+  }
+  ul {
+    float: right;
+    list-style: none;
+    z-index: 1;
+    padding: 0;
+    margin: 0;
+    li {
+      float: left;
+      margin-left: 10px;
+      font-size: small;
+    }
+  }
+}
+
+#debug {
+  text-align: left;
+}
+
+/* Input Fields */
+
+input,textarea {
+  -moz-box-sizing: border-box;
+  -moz-transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+  border: 1px solid #BBBBBB;
+  height: auto;
+  margin-bottom: 15px;
+  padding: 10px;
+  width: 100%;
+  box-shadow: 0 1px 1px rgba(0,0,0,.75) inset;
+  border-radius: 3px 3px 3px 3px;
+  color: #555555;
+  display: inline-block;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: normal;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+input:focus,textarea:focus {
+  border-color: rgba(101,115,131,0.8);
+  box-shadow: 0 1px 1px rgba(0,0,0,0.075) inset, 0 0 8px rgba(101,115,131,0.6);
+  outline: 0 none;
+}
+
+.form {
+  width: 400px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.button {
+  width: auto;
+  height: auto;
+  cursor: pointer;
+  &:hover {
+    background-color: silver;
+    -moz-transition: background-color 0.1s linear 0s;
+  }
+  &:focus {
+    box-shadow: 0 0 0 inset;
+  }
+}
+
+#error_window {
+  text-align: left;
+}

@@ -1,0 +1,10 @@
+<% provide :title,'Phi' %>
+<h2>Initial Test</h2>
+<p>Please enter as many digits of phi as you know (startigng with 1.61).</p>
+<div class="form">
+  <%= form_tag phi_index_path do %>
+    <%= text_area_tag :phi,params[:phi] %>
+
+    <%= submit_tag "Submit",class: "button" %>
+  <% end %>
+</div>

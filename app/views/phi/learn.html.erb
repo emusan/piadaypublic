@@ -1,0 +1,29 @@
+<% provide :title,'Learn Phi' %>
+<h2>Learn Phi</h2>
+<% if @phi.next_test < Time.now %>
+  <h2>Test Time!</h2>
+  <h4>Please enter as many digits of phi as you know.</h4>
+  <%= form_tag phi_path,method: :put do %>
+    <%= text_area_tag :phi,params[:phi] %>
+
+    <%= submit_tag "Submit",class: "button" %><br />
+
+    <%= submit_tag "Reset digits known",{class: "button",name: "reset"} %><br />
+
+    (be sure to enter as many as you know above though!)
+    <br /><br />
+    <%= submit_tag "Skip test",{class: "button",name: "skip"} %>
+  <% end %>
+  <% else %>
+  <h4>So far, you know:<br />
+    <h4><span class="digits"><%= digits_to_phi(@phi.digits_known) %></span></h4></h4>
+  <h2>Your next number is:<br />
+    <h2><span class="nextnum"><%= next_digit(@phi.digits_known) %></span></h4></h4>
+  <%= form_tag phi_path,method: :put do %>
+    <%= label_tag "Test now?" %>
+    <%= check_box_tag "test?" %><br />
+    <%= submit_tag "I know this!",class: "button" %>
+  <% end %>
+
+  Your next test will be in <%= pluralize(phi_days_to_next_test,"day") %>.
+<% end %>
