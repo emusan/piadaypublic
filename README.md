@@ -1,6 +1,6 @@
 #Pi a day code!
 
-[piaday.herokuapp.com](Pi a day) was a small project I came up with in order to facilitate my learning of the rails web framework over a summer.
+[Pi a day](piaday.herokuapp.com) was a small project I came up with in order to facilitate my learning of the rails web framework over a summer.
 
 The code is pretty basic, and probably pretty poor, but it does get the job done (for the most part), and I do hope that by releasing it as open source it does help someone!
 
