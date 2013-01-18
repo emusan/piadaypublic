@@ -12,6 +12,7 @@ I am considering this a completed project at this point, if you have code sugges
 If you would like to submit your own code/improvements by all means submit a pull request and if I deem it "worthy" it will be added!
 
 If you wish to praise me for my amazing coding skills, or give me a job, my contact info can be found on [my site](http://www.somestupidwebsite.com/email).
+
 If you wish to yell at me for this horrid mess of "code," I'm sorry but there is no way to contact me at all... (constructive criticism is always welcome though, and the link above will still work for you)
 
 This code is licensed under the MIT License, more details can be found in the LICENSE file, please read it, it's not long :).
